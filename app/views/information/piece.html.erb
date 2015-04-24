@@ -1,0 +1,22 @@
+<% key = (2..10).to_a %>
+<div class = "row">
+
+	<div class = "col-xs-2">   	
+  	</div>
+
+  	<div class = "col-xs-8" id = "data_encrypt"> 
+		<h1>Welcome to Headerlabs Test</h1>
+		<h4>Encrypt your data</h4>
+		<%= form_tag "/information/piece", id: "form_data" do %>   	
+			<label id = "content_label"> Content: </label>			
+			<%= text_area_tag :content, nil, required: true, maxlength: 54 %>						
+		    <%= submit_tag "Save", class: "btn btn-primary", id: "submit_button" %>		       
+		<% end %>
+		<%= image_tag("ajax.gif", size: "25x25", alt: "ajax loader", id: "loader") %>
+		<h4 id = "encrypted_data">Encrypted Content: </h4>
+		<h4 id = "error">Content Length should be less than 54.</h4>
+  	</div>
+
+  	<div class = "col-xs-2">   	
+  	</div>
+</div>
