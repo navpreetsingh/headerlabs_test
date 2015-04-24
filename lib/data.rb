@@ -11,8 +11,7 @@ class Data
 			num = Math.sqrt(length).ceil - 1		    		    
 			length = length - 1			
 		    hash = {}	          
-		    (0..num).each{|n| hash["array#{n}"] = ""}      
-		    debugger 
+		    (0..num).each{|n| hash["array#{n}"] = ""}
 		    (0..length).step(num + 1).each do |pos|
 		      (0..num).each {|down| hash["array#{down}"] += content[down + pos] unless (down + pos) > length }		      
 		    end
